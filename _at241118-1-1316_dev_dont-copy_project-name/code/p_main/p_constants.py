@@ -30,7 +30,8 @@ os.chdir(prj_root)
 
 OUTPUT_LIGHT_PATH = PY_PROGRAMS_ROOT + "/" + PROJECT_PATHCHUNK + "/_no_sync/output_light"
 
-OUTPUT_HEAVY_PATH = py_progs_root + "/_no_sync/output_light"
+# This path is to reach pradhana/no_dropbox
+#OUTPUT_HEAVY_PATH = PY_PROGRAMS_ROOT + "/_no_sync/output_light"
 
 COMMON_MODULES = "/storage/emulated/0/BitMiller/Pradhana/Dropbox/bitmiller_hu/progs/python_for_termux/__common"
 
