@@ -25,22 +25,26 @@ PROJECT_ROOT_PATHCHUNK = "__base_projects/_at241118-1-1316_dev_dont-copy_project
 
 #####
 
-PY_PROGRAMS_ROOT = "/storage/emulated/0/BitMiller/Pradhana/Dropbox/bitmiller_hu/progs/python_for_termux"
+PY_PROGRAMS_ROOT = PRADHANA_ROOT + DROPBOX_PATHCHUNK + PY_PROGRAMS_ROOT_PATHCHUNK
 
-PROJECT_ROOT = PRADHANA_ROOT + DROPBOX_PATHCHUNK + PY_PROGRAMS_ROOT_PATHCHUNK + PROJECT_ROOT_PATHCHUNK
+PROJECT_ROOT = PY_PROGRAMS_ROOT + PROJECT_ROOT_PATHCHUNK
 
-NS_PROJECT_ROOT = PRADHANA_ROOT + NS_DROPBOX_PATHCHUNK + PY_PROGRAMS_ROOT_PATHCHUNK + PROJECT_ROOT_PATHCHUNK
+NS_PY_PROGRAMS_ROOT = PRADHANA_ROOT + NS_DROPBOX_PATHCHUNK + PY_PROGRAMS_ROOT_PATHCHUNK
 
-# Change working directory to project's root directory
-prj_root = run_cmd[7:]
-prj_root = os.path.dirname(prj_root)
-prj_root = os.path.dirname(prj_root)
-os.chdir(prj_root)
+NS_PROJECT_ROOT = NS_PY_PROGRAMS_ROOT + PROJECT_ROOT_PATHCHUNK
 
-OUTPUT_LIGHT_PATH = PROJECT_ROOT + "/_no_sync/output_light"
+# Normal output for light data:
+OUTPUT_PATH = PROJECT_ROOT + "output"
 
-OUTPUT_HEAVY_PATH = PROJECT_ROOT + "/_no_sync/output_light"
+# Normal output for light, sensitive data:
+NS_OUTPUT_PATH = PROJECT_ROOT + "_no_sync/output"
 
-COMMON_MODULES_PATH = "/storage/emulated/0/BitMiller/Pradhana/Dropbox/bitmiller_hu/progs/python_for_termux/__common"
+# No-Dropbox output for heavy data:
+ND_OUTPUT_PATH = NS_PROJECT_ROOT + "output"
+
+# No-Dropbox output for heavy, sensitive data:
+ND_NS_OUTPUT_PATH = NS_PROJECT_ROOT + "_no_sync/output"
+
+COMMON_MODULES_PATH = PY_PROGRAMS_ROOT + "__common/"
 
 

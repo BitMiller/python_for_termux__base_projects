@@ -19,6 +19,9 @@ run_instance_date_time_stamp = "at" \
 + "-" \
 + str(run_start_time.microsecond).zfill(6)
 
+# Change working directory to project's root directory
+os.chdir(PROJECT_ROOT)
+
 print()
 print("==*******************==")
 print("     PROGRAM BEGIN    ")
